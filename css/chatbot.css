@@ -1,18 +1,35 @@
 /* CHATBOT STYLING */
 /* Floating Button */
 #chatbot-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ffbd39;
-    color: white;
-    font-size: 22px;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: #ffbd39;
+  color: white;
+
+  padding: 12px 18px;
+  border-radius: 30px; 
+
+  font-weight: 600;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+  z-index: 999;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+  animation: bounce 1.5s infinite;
+}
+
+#chatbot-btn:hover {
+  animation: bounce 0.6s ease;
+  transform: scale(1.08);
+}
   
   /* Chat Container */
   #chatbot-container {
@@ -109,5 +126,14 @@
     #chatbot-container {
       width: 80%;
       height: 75%;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
     }
   }
