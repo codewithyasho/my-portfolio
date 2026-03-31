@@ -114,12 +114,46 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
+
+		.top-shree-symbol {
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 1.5rem;
+			font-weight: 400;
+			line-height: 1;
+			color: #FF9900;
+			z-index: 5;
+			pointer-events: none;
+			text-shadow: 0 0 12px rgba(255, 189, 57, 0.35);
+		}
+
+		.ftco-navbar-light {
+			top: 10px;
+		}
+
+		.ftco-navbar-light.scrolled {
+			top: 0;
+		}
+
+		@media (max-width: 991.98px) {
+			.top-shree-symbol {
+				top: 10px;
+				font-size: 1.5rem;
+			}
+
+			.ftco-navbar-light {
+				top: 20px;
+			}
+		}
 	</style>
 
 
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<div class="top-shree-symbol" aria-hidden="true">श्री</div>
 
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -517,7 +551,8 @@
 									Developers Tool</a></h3>
 
 							<p>Transform any documentation into an intelligent, queryable knowledge base powered by AI
-								and RAG. Reading 100+ pages line-by-line to find answers is inefficient and frustrating.</p>
+								and RAG. Reading 100+ pages line-by-line to find answers is inefficient and frustrating.
+							</p>
 
 							<p><a href="https://ragify-docs.streamlit.app/"
 									class="btn btn-white btn-outline-white py-2 px-2" target="_blank">Live Demo</a></p>
@@ -873,27 +908,28 @@
 		</svg></div>
 
 	<!-- Chatbot Button -->
-    <div id="chatbot-btn">
+	<div id="chatbot-btn">
 		<svg viewBox="0 -960 960 960" width="20" height="20" fill="currentColor">
-			<path d="M160-360q-50 0-85-35t-35-85q0-50 35-85t85-35v-80q0-33 23.5-56.5T240-760h120q0-50 35-85t85-35q50 0 85 35t35 85h120q33 0 56.5 23.5T800-680v80q50 0 85 35t35 85q0 50-35 85t-85 35v160q0 33-23.5 56.5T720-120H240q-33 0-56.5-23.5T160-200v-160Z"/>
+			<path
+				d="M160-360q-50 0-85-35t-35-85q0-50 35-85t85-35v-80q0-33 23.5-56.5T240-760h120q0-50 35-85t85-35q50 0 85 35t35 85h120q33 0 56.5 23.5T800-680v80q50 0 85 35t35 85q0 50-35 85t-85 35v160q0 33-23.5 56.5T720-120H240q-33 0-56.5-23.5T160-200v-160Z" />
 		</svg>
 		ASK AI
 	</div>
 
-    <!-- Chatbot Container -->
-    <div id="chatbot-container" class="hidden">
-        <div class="chat-header">
-            <span><b>Ask About Me</b></span>
-            <button id="close-chat">✖</button>
-        </div>
+	<!-- Chatbot Container -->
+	<div id="chatbot-container" class="hidden">
+		<div class="chat-header">
+			<span><b>Ask About Me</b></span>
+			<button id="close-chat">✖</button>
+		</div>
 
-        <div id="chat-body"></div>
+		<div id="chat-body"></div>
 
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type a message..." />
-            <button id="send-btn"><b>Send</b></button>
-        </div>
-    </div>
+		<div class="chat-input">
+			<input type="text" id="user-input" placeholder="Type a message..." />
+			<button id="send-btn"><b>Send</b></button>
+		</div>
+	</div>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
