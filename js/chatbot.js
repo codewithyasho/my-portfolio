@@ -51,7 +51,7 @@ async function callAPI(userMessage) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        query: userMessage,
+        prompt: userMessage,
       }),
     });
 
